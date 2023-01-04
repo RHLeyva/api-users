@@ -1,0 +1,24 @@
+{
+  "name": "codechallengenode",
+  "version": "1.0.0",
+  "description": "Users API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "user"
+  ],
+  "author": "Rodrigo Hernandez",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "joi": "^17.7.0",
+    "mongoose": "^6.8.2"
+    
+  }
+}
