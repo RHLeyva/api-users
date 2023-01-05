@@ -1,6 +1,7 @@
 
 const User = require('../models/user');
 
+
 const emailExist = async ( email = '' ) => {
     const existEmail = await User.findOne({ email });
     if ( existEmail ) {
@@ -15,18 +16,12 @@ const existUserById = async( id ) => {
     }
 }
 
-const idExist = async (id = '') =>{
-    const existId = await User.findOne({id});
-    if (existId) {
-        throw new Error (`${ id} has already been registered`);
-    }
-}
+
 
 
 
 module.exports = {
     emailExist,
-    existUserById,
-    idExist
+    existUserById
 }
 
