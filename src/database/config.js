@@ -1,9 +1,16 @@
 const mongoose = require('mongoose');
 mongoose.set("strictQuery", false);
-const dbConnection = async() => {
 
+const {MONGODB_CNN, MONGODB_CNN_TEST, NODE_ENV} = process.env
+const connectionString = NODE_ENV === 'test'
+        ?MONGODB_CNN_TEST
+        :MONGODB_CNN
+
+        
+const dbConnection = async() => {
+    
     try {
-        await mongoose.connect(process.env.MONGODB_CNN, {
+        await mongoose.connect(connectionString, {
             // useNewUrlParser: true,
             // useUnifiedTopology: true,
             // useCreateIndex: true,
