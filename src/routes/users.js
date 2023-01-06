@@ -32,7 +32,7 @@ router.post('/',[
     check('birthDate', 'Birthdate is required').not().isEmpty(),
     
     validateData,
-    ],  userPost);
+],  userPost);
 
 router.delete('/:id',[
     check ('id').custom(existUserById),

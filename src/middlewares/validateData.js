@@ -8,6 +8,8 @@ const validateData = (req, res, next) => {
     next();
 }
 
+
+
 module.exports = {
     validateData
 }
